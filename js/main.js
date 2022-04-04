@@ -49,8 +49,30 @@ function renderProjectsModals(id) {
           Close Project</button>`
 
     elProject.innerHTML = strHTML
+
+    hideCanvas()
 }
 
 function getSelector(selector) {
     return document.querySelector(selector)
+}
+
+function sendEmail() {
+
+    var message = document.getElementById("message").value
+    var subject = document.getElementById("subject").value
+    var name = document.getElementById("name").value
+    var email = document.getElementById("email").value
+
+    if (!email) return
+    //debugger
+    //window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&[su=${subject}&body=${message}`
+    //window.location.href = `https://mail.google.com/mail/u/0/?to=${email}&su=${subject}&body=${message}&fs=1&tf=cm`
+
+    window.open(
+        `https://mail.google.com/mail/u/0/?to=${email}&su=${subject}&body=${message}&fs=1&tf=cm`,
+        '_blank' // <- This is what makes it open in a new window.
+    );
+
+    document.querySelector('.offcanvas-aside').classList.remove('offcanvas-aside-open');
 }

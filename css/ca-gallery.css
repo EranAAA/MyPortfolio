@@ -100,7 +100,7 @@ body {
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    background: red;
+    background: rgb(240, 176, 56);
     width: 80vw;
     right: -80vw;
     z-index: 10;
@@ -892,4 +892,12 @@ fieldset[disabled] .btn-xl:hover {
 .container {
     padding-right: 0;
     padding-left: 0;
+}
+
+.contactMe {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn-color {
+    color: black;
 }
